@@ -2,7 +2,7 @@
 
 $hostname='localhost';
 $database='Web16100292';
-$username='PEDRO-ZAVALA\SQLANALISIS';
+$username='USUARIO\PEDROZAVALA04';
 $password='';
 
 try {

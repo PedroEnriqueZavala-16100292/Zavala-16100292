@@ -7,13 +7,14 @@ use Web16100292
 create table Doctor(
 Id_Doctor int not null,
 NombreDoctor varchar(30) not null,
+Password varchar (20) not null,
 Primary key (Id_Doctor))
 
-insert into Doctor values (1,'Juan Perez')
-insert into Doctor values (2,'Pablo Barrea')
-insert into Doctor values (3,'Juan Escutia')
-insert into Doctor values (4,'Raul Jimenez')
-insert into Doctor values (5,'Edson Alvarez')
+insert into Doctor values (1,'Juan Perez','abcd1234')
+insert into Doctor values (2,'Pablo Barrea','abcd1234')
+insert into Doctor values (3,'Juan Escutia','abcd1234')
+insert into Doctor values (4,'Raul Jimenez','abcd1234')
+insert into Doctor values (5,'Edson Alvarez','abcd1234')
 
 select * from Doctor
 
