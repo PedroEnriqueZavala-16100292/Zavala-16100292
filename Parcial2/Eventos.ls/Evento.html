@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset='UTF-8'>
+	<title>EVENT BUBBLING</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	</head>
+<font size=6>
+<body bgcolor="	LightCoral">
+	<div id="contenedor">
+	<h1>INVESTIGACION SOBRE EVENT BUBBLING</h1>
+    <h2>Nombre de Alumno:Pedro Enrique Zavala Arreola</h2>
+    <h3>Numero De Control: 16100292</h3>
+	
+		<head>
+			<title>Informacion Obtenida</title>
+		</head>
+        <hr align="left" width="50%" size="10"noshade>
+		<div id="contenedor1"></div>
+		    <p> Los eventos son la manera que tenemos de monitorizar el comportamiento de nuestros usuarios, por ejemplo al detectar cuando se hace click en un botón
+
+            </br> Para capturar esos eventos se utilizan los listeners, con la siguiente estructura</br>
+        <li> el.addEventListener(event, () => {})</p></li>
+               
+                <hr align="left" width="50%" size="10" noshade>
+		    <p>Donde para capturar el click en un botón, el event será del tipo click</br>
+
+                
+            <li>const el = document.getElementById('mi_boton')
+                el.addEventListener('click', () => {
+                  console.log('elemento clicado!')
+                })</p></li>
+		
+        <title>Bubbling y Capturing</title>
+        <div id="contenedor2"></div>
+
+        <p>Entendido como se pueden monitorear los eventos, entonces entender que es el bubbling y el 
+            capturing es sencillo</br>
+            Si te fijas en este código, tienes un div con id mi_div, dentro tienes un botón con id mi_boton_1
+             y dentro de este botón tienes otro botón con id mi_boton_2</p></br>
+             <p>
+            <li>div id="mi_div"</br></li>
+            <li>button id="mi_boton_1"
+                  Boton 1</br></li>
+                <li>button id="mi_boton_2">Boton 2button
+                button</li>
+              </p>
+            <p>Ahora se añaden los listeners para los 3 elementos</br>
+              
+                <li> document.getElementById('mi_boton_1').addEventListener('click', () => console.log('boton 1 clicado!'))</br></li>
+            
+            <li> document.getElementById('mi_boton_2').addEventListener('click', () => console.log('boton 2 clicado!'))</br></li>
+            
+        <li> document.getElementById('mi_div').addEventListener('click', () => console.log('div clicado!'))</br></li>
+            
+              <hr align="left" width="50%" size="10" noshade>
+              Si aprietas cualquiera de los 2 botones tendrás 2 eventos, el del propio botón y el del div que está por encima</br>
+            
+            El evento del div ocurre porque cuando clickas el botón, también estás clickando el div por lo que los dos reciben el evento</br>
+            
+            Primero lo recibe el botón, y luego lo recibe el div</br>
+            
+            Pero si aprietas el botón 2 por qué no tienes también el evento del botón 1?</br>
+            
+            Porque los botones no pueden anidar otros botones, por lo que el navegador simplemente lo ignora (stackoverflow)</br>
+           
+            
+            El bubbling por lo tanto es el hecho de tener eventos que traspasan el elemento primero y se propagan a sus elementos que los incluyan</br>
+            
+            Y lo contrario es el capturing, es decir, es lo mismo pero el evento va en la dirección opuesta, nace en el elemento más general y se va propagando hasta llegar al elemento original</br>
+        </p>
+	</div>
+</body>
+</html>
