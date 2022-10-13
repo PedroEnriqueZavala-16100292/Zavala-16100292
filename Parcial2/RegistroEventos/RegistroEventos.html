@@ -1,0 +1,52 @@
+<DOCTYPE html >
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="RegistroEventos.css">
+        <script src = "jquery-3.6.1.min.js"></script>
+        <title>GridLayoult</title>
+    </head>
+    <body>
+        <div class="contenedor">
+            <div id="caja1" class="caja">caja1</div>
+            <div id="caja2" class="caja">caja2</div>
+            <div id="caja3" class="caja">caja3</div>
+            <div id="caja4" class="caja">caja4</div>
+          
+        </div>
+
+        <script>
+           /* document.getElementById("caja1").onclick = function () {alert("click en caja 1")};
+            document.querySelector('#caja2').addEventListener("click",miFuncion2);
+            document.querySelector('#caja3').addEventListener("click",miFuncion3);
+            document.querySelector('#caja4').addEventListener("click",miFuncion4);
+            document.querySelector('#caja5').addEventListener("click",miFuncion5);
+
+            function miFuncion2(){alert("click en boton 2 / funcion2");}
+            function miFuncion3(){alert("click en boton 3 / funcion2");}
+            function miFuncion4(){alert("click en boton 4 / funcion2");}
+            function miFuncion5(){alert("click en boton 5 / funcion2");}*/
+        
+            $(document).ready(function() {
+                $('#caja1').click(function() {
+                    alert('se escucho el click con la libreria jquery');
+                }); 
+        });
+
+        $(document).ready(function() {
+                $('#caja2').click(function() {
+                    alert('se escucho el click con la libreria jquery');
+                }); 
+        });
+
+        $(document).ready(function() {
+                $('#caja3').click(function() {
+                    alert('se escucho el click con la libreria jquery');
+                }); 
+        });
+        </script>
+
+      
+    </body>
+    </html>

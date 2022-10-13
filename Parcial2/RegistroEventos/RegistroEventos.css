@@ -1,0 +1,54 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0%;
+}
+
+.contenedor {
+    width: 100vw;
+    height: 100vh;
+    background-color: blue;
+    display: grid;
+    grid-template-columns:  40% 40% 20%;
+    grid-template-rows: 90% 10%;
+    grid-template-areas: 'columna1 columna2 menulat'
+                         'piepagina piepagina menulat';
+    justify-content: stretch;
+    justify-items: stretch;
+    align-items: stretch;
+    align-content: stretch;
+}
+
+.caja {
+    
+    background-color: brown;
+    text-align: center;
+    border: 3px solid black;
+
+}
+
+/*MenuLar*/
+#caja1 {grid-area: menulat;}
+#caja2 {grid-area: columna1;}
+#caja3 {grid-area: columna2;}
+#caja4 {grid-area: piepagina1;}
+/*#caja5 {grid-area: piepagina2;}*/
+
+
+
+@media screen and (max-width: 900px ) {
+   .contenedor {   
+   grid-template-columns:   80% 20%;
+   grid-template-rows: 300px 300px 300px;
+   grid-template-areas:  'columna1 menulat'
+                          'columna2 menulat'
+                          'piepagina1 menulat'
+                          ;
+                }
+    
+}
+
+.contenedor .caja:hover {
+    width: 500px;
+    transform: rotate(250deg);
+}
