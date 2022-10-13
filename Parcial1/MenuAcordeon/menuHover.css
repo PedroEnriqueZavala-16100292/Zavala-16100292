@@ -1,0 +1,50 @@
+*{
+    box-sizing: content-box;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+ul {
+    list-style: none;
+    width: 150px;
+    height: 300px;
+    margin: 10px auto;
+    width: 50%;
+    font-size: 30px;
+    
+}
+/*inicialmente los submenus estan escondidos*/
+ul > li >ul {
+    display: none;
+}
+/*los submenus solo se muestran cuando el usuario haga click en la opcion se llegue
+desde el enlace al elemento*/
+ul .opcion li {
+    list-style: none;
+    overflow: hidden;
+    transition: .3s all ease-in;
+} 
+
+ul > li:hover > ul {
+    display: block;
+    max-height: 500px;
+    transition: .3s all ease-in;
+}
+.opcion {
+    background: gray;
+    color: aqua;
+    border-bottom: 5px solid black;
+    border-top: 10px solid gold;
+    position: relative;
+}
+
+.SubOpcion {
+    background: black;
+    display: flex;
+    border-bottom: 5px solid #000;
+    border-top: 10px solid aqua;
+    box-sizing: border-box;
+    text-decoration: overline;
+    margin: 10px;
+    position: relative;
+}

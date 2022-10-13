@@ -1,0 +1,33 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0%;
+}
+ul {
+    list-style: none;
+    width: 200px;
+    height: 500px;
+}
+/*inicialmente los submenus estan escondidos*/
+ul > li >ul {
+    display: none;
+}
+/*los submenus solo se muestran cuando el usuario haga click en la opcion se llegue
+desde el enlace al elemento*/
+ul > li:target > ul {
+    display: block;
+    height: 100px;
+}
+.opcion{
+    background: red;
+    color: aqua;
+}
+a {
+    color: brown;
+    text-decoration: none;
+}
+.subOpcion {
+    padding-left: 20px;
+    background: purple;
+    color: blueviolet;
+}

@@ -1,0 +1,26 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0%;
+}
+
+.contenedor {
+    width: 100w;
+    height: 100vh;
+    background-color: blue;
+    display: grid;
+    grid-template-columns:  150px 150px 150px;
+    grid-template-rows: 150px 150px 150px;
+    justify-content: center;
+    justify-items: center;
+    align-content: center;
+}
+
+.caja {
+    width: 100px;
+    height: 100px;
+    background-color: brown;
+    text-align: center;
+    border: 3px solid black;
+
+}

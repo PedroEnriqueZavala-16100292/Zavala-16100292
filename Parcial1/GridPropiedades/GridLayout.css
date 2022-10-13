@@ -1,0 +1,37 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0%;
+}
+
+.contenedor {
+    width: 100vw;
+    height: 100vh;
+    background-color: blue;
+    display: grid;
+    grid-template-columns:  25% 50% 25%;
+    grid-template-rows: 20% 70% 10%;
+    grid-template-areas:  'menulat encabezado encabezado'
+                          'menulat columna1 columna2'
+                         'menulat piepagina piepagina';
+    justify-content: stretch;
+    justify-items: stretch;
+    align-items: stretch;
+    align-content: stretch;
+}
+
+.caja {
+    
+    background-color: brown;
+    text-align: center;
+    border: 3px solid black;
+
+}
+
+/*MenuLar*/
+#caja1 {grid-area: menulat;}
+#caja2 {grid-area: encabezado;}
+#caja3 {grid-area: columna1;}
+#caja4 {grid-area: columna2;}
+#caja5 {grid-area: piepagina;}
+
