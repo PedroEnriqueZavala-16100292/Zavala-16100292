@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="eventodelegacion.css">
+</head>
+
+<body>
+    <div class="content">
+        <div id="Header"> da click sobre mi </div>
+        <div id="box1-1"> 1-1 </div>
+        <div id="box1-2"> 1-2 </div>
+        <div id="box2-1"> 2-1 </div>
+        <div id="box2-2"> 2-2 </div>
+    </div>
+
+    <script>
+        document.getElementById("box1-1").onclick = function () {alert("click en primera caja")};
+        document.getElementById("box1-2").onclick = function () {alert("click en primera caja segunda division")};
+        document.getElementById("box2-1").onclick = function () {alert("click en segunda caja")};
+        document.getElementById("box2-2").onclick = function () {alert("click en segunda caja segunda division")};
+        document.getElementById("Header").onclick = function () {alert("ARRIBA EL AMERICA")};
+
+    </script>
+</body>
+
+</html>
