@@ -1,33 +1,60 @@
-*{
+*
+{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
 
+}
 .container {
+   top: 5px;
     overflow: hidden;
     position: fixed;
-    height: 1000px;
+    height: 100%;
     width: 300px;
     margin: auto;
     border: 0.5em solid black;
 	background-color: purple;
-	font-size: 0.65em;
+	font-size: 100%;
+	
   }
+  #sidebar .toogle-btn {
+    position: fixed;
+    left: 301px;
+    top: 5px;
+    cursor: pointer;
+    display: block;
+      width: 50px;
+      text-align: center;
+      font-size: 30px;
+      border: 1px solid black;
+      background: yellow;
+      border-bottom: 2%;
+    }
 
+   #sidebar {
+    position: fixed;
+    width: 50px;
+    background: yellow;
+    right: 72%;
+   }
+
+  .active {
+    transform: translate(100%);
+  }
+  
   nav {
     display: flex;
     flex-direction: column;
     position: absolute;
     right: 100%;
-    padding: 2em;
+    padding: 15px 10px;
     background-color: skyblue;
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 20px;
 	text-align: right;
 	top: 5%;
 	
- 
+	
     transform: translateX(1em);
     transition: 0.2s transform;
   }
@@ -57,3 +84,6 @@
 	letter-spacing: 0.3;
 	text-transform: uppercase;
   }
+
+
+
