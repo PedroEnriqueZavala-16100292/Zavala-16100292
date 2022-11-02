@@ -20,10 +20,8 @@ window.onload=function(){
                 }}; //declaramos  la funcion
             solicitud.open("GET","header.txt",true);
             solicitud.send();
-    
         }
 
-    
         function iniciarheader() {
             document.getElementById("mydiv").innerText = "hola de regreso";
             console.log("hola regresar");
