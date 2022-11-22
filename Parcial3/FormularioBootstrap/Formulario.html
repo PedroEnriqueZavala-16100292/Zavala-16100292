@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Bootstrap, toast y modal</title>     
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+  </head>
+  <body>
+    <h1>Recetario</h1>
+
+    <form>
+        <div class="row">
+            <div class="from-group col-sm-12 col-md-4 col-lg-2">
+                <label for="idReceta" class="form-label">N.Receta</label>
+                <input type="text" class="form-control" id="idReceta">
+              </div>
+          
+              <div class="from-group col-sm-12 col-md-8 col-lg-10">
+                <label for="idNombre" class="form-label">Nombre Paciente</label>
+                <input type="text" class="form-control" id="idNombre">
+              </div>
+            </div>
+            <div class="row">
+              <div class="from-group col-sm-3 col-md-4 col-lg-4">
+                <label for="idEdad" class="form-label">Edad</label>
+                <input type="text" class="form-control" id="idEdad">
+              </div>
+          
+              <div class="from-group col-sm-5 col-md-4 col-lg-4">
+                <label for="idPeso" class="form-label">Peso</label>
+                <input type="text" class="form-control" id="idPeso">
+              </div>
+
+              <div class="from-group col-sm-4 col-md-4 col-lg-4">
+                <label for="idEstatura" class="form-label">Estatura</label>
+                <input type="text" class="form-control" id="idEstatura">
+              </div>
+            </div>
+            <div class="row">
+              <div class="from-group col-sm-4 col-md-4 col-lg-4">
+                <label for="idCorreo" class="form-label">Correo electronico</label>
+                <input type="text" class="form-control" id="idCorreo">
+              </div>
+
+              <div class="from-group col-sm-4 col-md-4 col-lg-4">
+                <label for="idTelefono" class="form-label">Telefono para comunicacion</label>
+                <input type="text" class="form-control" id="idTelefono">
+              </div>
+              
+              <div class="from-group col-sm-4 col-md-4 col-lg-4">
+                <label for="idPadecimientos" class="form-label">Padece enfermedades</label>
+                <input type="text" class="form-control" id="idPadecimientos">
+              </div>
+        </div>
+
+             
+    </form>
+    <div class="from-group col-sm-10 col-md-10 col-lg-10">
+
+    
+    <button type="submit" class="btn btn-primary" id="Registrar">Registrar Paciente</button>
+
+    <button type="button" class="btn btn-primary" id="liveToastBtn">Esto es un toast</button>
+
+<div class="toast-container position-fixed bottom-0 end-0 p-3">
+  <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+    <div class="toast-header">
+      <img src="." class="rounded me-2" alt="texto2">
+      <strong class="me-auto">Bootstrap</strong>
+      <small>11 mins ago</small>
+      <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+    </div>
+    <div class="toast-body">
+      Confirmacion de que la receta fue dada de alta con un toast
+    </div>
+  </div>
+</div>
+
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" id="Modal">
+  Confirmacion de que la receta fue dada de alta con un modal
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        <button type="button" class="btn btn-primary">Confirmarcion</button>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<script>
+  document.getElementById("Registrar").addEventListener("click",async () => {
+    let respuesta = await fetch('GetRegistro.php');
+    console.log("hola")
+    let dato = await respuesta.json();
+    document.getElementById("idReceta").value=dato.idReceta;
+    /**document.getElementById("idNombre").value=dato.idNombre;
+    /**document.getElementById("idEdad").value=dato.idEdad;
+    document.getElementById("idPeso").value=dato.idPeso;
+    document.getElementById("idEstatura").value=dato.idEstatura;
+    document.getElementById("idCorreo").value=dato.idCorreo;
+    document.getElementById("idTelefono").value=dato.idTelefono;
+    document.getElementById("idPadecimiento").value=dato.idPadecimiento;*/
+  });
+</script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    
+    <script>
+      const toastTrigger = document.getElementById('liveToastBtn')
+const toastLiveExample = document.getElementById('liveToast')
+if (toastTrigger) {
+  toastTrigger.addEventListener('click', () => {
+    const toast = new bootstrap.Toast(toastLiveExample)
+
+    toast.show()
+  })
+}
+    </script>
+  </body>
+</html>
