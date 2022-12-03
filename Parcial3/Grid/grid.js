@@ -8,31 +8,21 @@ $(document).ready(function() {
           "Accept": "*/*"
         }
       };
-      
       $.ajax(settings).done(function (response) {
-        
-       /* 
-        console.log(tabla);*/
-        console.log(response);
-        let tabla = response;
-
-
-
+        console.log (response);
         $("#jsGrid").jsGrid({
             width: "100%",
-            height: "400px",
-     
+            height: "400px",      
+            data: JSON.parse(response),
             inserting: true,
             editing: true,
             sorting: true,
             paging: true,
-     
-            data: response,
-     
+            
             fields: [
-                { name: "idReceta", type: "text", width: 150, validate: "required" },
-                { name: "idNombre", type: "text", width: 50 },
-                { name: "idEdad", type: "text", width: 150, validate: "required" }
+                { name: "idreceta", title: "receta",type: "text", width: 100},
+                { name: "idnombre" , title: "nombre",type: "text", width: 50 },
+                { name: "idedad",title: "edad", type: "text", width: 100},
             ]
         });
       }); 

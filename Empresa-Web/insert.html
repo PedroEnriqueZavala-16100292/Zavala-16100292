@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>crear usuario</title>
+    <link rel="stylesheet"
+    href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+    <link rel = "stylesheet" href ="./css/HojaEstilos.css">
+</head>
+<body>
+    <form class="formulario" method="POST" action="./insert.php" name="Registro">
+        <h1>Crea un usuario</h1>
+        <div class="contenedor">
+            <div class ="input-contenedor">
+                
+                <input type="text" name = "clave" placeholder="clave" required>
+            </div>
+            <div class ="input-contenedor">
+                
+                <input type="text" name = "nombre" placeholder="nombre" required>
+            </div>
+            <div class ="input-contenedor">
+                
+                <input type="text" name ="direccion" placeholder="direccion" required>
+            </div>
+            <div class ="input-contenedor">
+                
+                <input type="text" name ="sucursal" placeholder="sucursal" required>
+            </div>
+
+            <div class ="input-contenedor">
+                
+                <input type="text" name ="saldo" placeholder="saldo" required>
+            </div>
+            <div class ="input-contenedor">
+                
+                <input type="text" name ="codigo_postal" placeholder="codigo_postal" required>
+            </div>
+            <div class ="input-contenedor">
+                
+                <input type="text" name ="rfc" placeholder="rfc" required>
+            </div>
+            
+           <input type="submit" value ="agregar" class="button">
+
+        </div>
+    </form>
+</body>
+</html>
