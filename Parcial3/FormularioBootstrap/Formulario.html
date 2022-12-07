@@ -105,17 +105,17 @@
 
 <script>
   document.getElementById("Registrar").addEventListener("click",async () => {
-    let respuesta = await fetch('GetRegistro.php');
+    let respuesta = await fetch('ObtenerRegistro.php');
     console.log("hola")
     let dato = await respuesta.json();
     document.getElementById("idReceta").value=dato.idReceta;
-    /**document.getElementById("idNombre").value=dato.idNombre;
-    /**document.getElementById("idEdad").value=dato.idEdad;
+    document.getElementById("idNombre").value=dato.idNombre;
+    document.getElementById("idEdad").value=dato.idEdad;
     document.getElementById("idPeso").value=dato.idPeso;
     document.getElementById("idEstatura").value=dato.idEstatura;
     document.getElementById("idCorreo").value=dato.idCorreo;
     document.getElementById("idTelefono").value=dato.idTelefono;
-    document.getElementById("idPadecimiento").value=dato.idPadecimiento;*/
+    document.getElementById("idPadecimientos").value=dato.idPadecimiento;
   });
 </script>
 
